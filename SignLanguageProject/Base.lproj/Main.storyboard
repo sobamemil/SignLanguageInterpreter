@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uiJ-sV-fLT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--2번 화면-->
+        <scene sceneID="J9A-Wv-9nM">
+            <objects>
+                <tableViewController id="KyI-xs-OTL" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="07t-hh-jZr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vTv-a3-f2F">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vTv-a3-f2F" id="9Ml-2l-7TD">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KyI-xs-OTL" id="8oL-dz-iRg"/>
+                            <outlet property="delegate" destination="KyI-xs-OTL" id="OEH-4g-h3Y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="2번 화면" id="GQA-WQ-eej"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1m-hj-2GO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="31"/>
+        </scene>
+        <!--1번 화면-->
+        <scene sceneID="rVI-uT-ubX">
+            <objects>
+                <viewController id="Mri-WJ-6cO" customClass="TabBar2ViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WHK-5R-YBI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peY-Kk-a5i">
+                                <rect key="frame" x="171" y="743" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="촬영하기"/>
+                                <connections>
+                                    <action selector="btnCamera:" destination="Mri-WJ-6cO" eventType="touchUpInside" id="LGa-q9-gIp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R5d-ar-otc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="1번 화면" id="ti2-Lf-lMw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKk-9P-i80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="-804"/>
+        </scene>
+        <!--2번 화면-->
+        <scene sceneID="5VV-K7-HlH">
+            <objects>
+                <navigationController id="g7R-qf-bRu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="2번 화면" id="swt-Ij-FbL"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9T-y1-tsn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KyI-xs-OTL" kind="relationship" relationship="rootViewController" id="OXQ-MY-QaU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeR-Ti-gvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="31"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jbE-X4-NaX">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uiJ-sV-fLT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hIK-9r-89w">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Mri-WJ-6cO" kind="relationship" relationship="viewControllers" id="ZpZ-y9-YND"/>
+                        <segue destination="g7R-qf-bRu" kind="relationship" relationship="viewControllers" id="JGJ-GM-PUd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxk-CL-FI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-465.21739130434787" y="-430.58035714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
