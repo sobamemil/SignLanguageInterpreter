@@ -11,7 +11,7 @@
 		5704EBF4262425800004BB4D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EBF3262425800004BB4D /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5704EBF6262425850004BB4D /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EBF5262425850004BB4D /* CoreML.framework */; };
 		5704EBF82624258E0004BB4D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EBF72624258E0004BB4D /* CoreVideo.framework */; };
-		572C965026231414004907F1 /* Test.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 572C964F26231414004907F1 /* Test.mlproj */; };
+		570F57B626246C2E0001BDC8 /* Test1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 570F57B526246C2E0001BDC8 /* Test1.mlmodel */; };
 		5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944126241FC0001E1EA3 /* VideoCapture.swift */; };
 		5789944526242033001E1EA3 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944426242033001E1EA3 /* CapturePreviewView.swift */; };
 		57E7B0C42622B19D00D0BE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */; };
@@ -29,7 +29,7 @@
 		5704EBF3262425800004BB4D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5704EBF5262425850004BB4D /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		5704EBF72624258E0004BB4D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		572C964F26231414004907F1 /* Test.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Test.mlproj; sourceTree = "<group>"; };
+		570F57B526246C2E0001BDC8 /* Test1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Test1.mlmodel; sourceTree = "<group>"; };
 		5789944126241FC0001E1EA3 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		5789944426242033001E1EA3 /* CapturePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
 		57E7B0C02622B19D00D0BE79 /* SignLanguageProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignLanguageProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,8 +88,8 @@
 		57E7B0C22622B19D00D0BE79 /* SignLanguageProject */ = {
 			isa = PBXGroup;
 			children = (
-				572C964F26231414004907F1 /* Test.mlproj */,
 				57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */,
+				570F57B526246C2E0001BDC8 /* Test1.mlmodel */,
 				57E7B0C52622B19D00D0BE79 /* SceneDelegate.swift */,
 				5789944126241FC0001E1EA3 /* VideoCapture.swift */,
 				57E7B0C72622B19D00D0BE79 /* ViewController.swift */,
@@ -163,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E7B0D32622B19E00D0BE79 /* LaunchScreen.storyboard in Resources */,
-				572C965026231414004907F1 /* Test.mlproj in Resources */,
 				57E7B0D02622B19E00D0BE79 /* Assets.xcassets in Resources */,
 				57E7B0CB2622B19D00D0BE79 /* Main.storyboard in Resources */,
 			);
@@ -184,6 +183,7 @@
 				5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */,
 				57E7B0C62622B19D00D0BE79 /* SceneDelegate.swift in Sources */,
 				5704EBF0262422250004BB4D /* CIImage.swift in Sources */,
+				570F57B626246C2E0001BDC8 /* Test1.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
