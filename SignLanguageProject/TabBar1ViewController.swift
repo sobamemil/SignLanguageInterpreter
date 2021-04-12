@@ -11,9 +11,7 @@ import AVKit
 
 class TabBar2ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    let imagePicker: UIImagePickerController! = UIImagePickerController()
-    @IBOutlet weak var imgView: UIImageView!
-    
+    let imagePicker: UIImagePickerController! = UIImagePickerController()    
     @IBAction func btnCamera(_ sender: Any) {
         if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
             imagePicker.sourceType = .camera
