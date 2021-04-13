@@ -40,7 +40,7 @@ public class VideoCapture : NSObject{
         // 여러 구성 처리를 일괄 작업한다는 신호를 보낸다. 변경사항은 commitConfiguration 메서드르 호출해야 반영된다.
         captureSession.beginConfiguration()
         //원하는 품질을 고른다.
-        captureSession.sessionPreset = AVCaptureSession.Preset.medium
+        captureSession.sessionPreset = AVCaptureSession.Preset.high
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else{
             print("ERROR : no video device available")
             return false
