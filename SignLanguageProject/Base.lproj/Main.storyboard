@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKk-9P-i80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="-804"/>
+            <point key="canvasLocation" x="588" y="-769"/>
         </scene>
         <!--2번 화면-->
         <scene sceneID="5VV-K7-HlH">
@@ -100,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="-465.21739130434787" y="-430.58035714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="MwM-0c-GPP">
             <objects>
                 <viewController id="tm4-0f-ePY" customClass="ViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,6 +124,7 @@
                         <viewLayoutGuide key="safeArea" id="aAb-Ok-OwL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="WKX-BL-dWs"/>
                     <connections>
                         <outlet property="classifiedLabel" destination="liy-Ua-8c0" id="eQx-sy-2s7"/>
                         <outlet property="previewView" destination="A6w-aE-ls5" id="gUr-nI-wbN"/>
@@ -131,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bou-nC-yqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-954" y="279"/>
+            <point key="canvasLocation" x="-2083" y="-380"/>
         </scene>
     </scenes>
     <resources>

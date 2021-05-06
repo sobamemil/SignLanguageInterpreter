@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     let videoCapture : VideoCapture = VideoCapture()
     let context = CIContext()
-    let model = SL()
+    let model = MyImageClassifier_1()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +36,6 @@ class ViewController: UIViewController {
         }else{
             fatalError("Fail to init Video Capture")
         }
-        
-        
-        
     }
 }
 

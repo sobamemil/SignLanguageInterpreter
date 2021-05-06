@@ -15,6 +15,7 @@
 		570F57C72625DE8A0001BDC8 /* SL.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 570F57C62625DE8A0001BDC8 /* SL.mlmodel */; };
 		5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944126241FC0001E1EA3 /* VideoCapture.swift */; };
 		5789944526242033001E1EA3 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944426242033001E1EA3 /* CapturePreviewView.swift */; };
+		57C7F71B263978EF0065DAE3 /* MyImageClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57C7F71A263978EF0065DAE3 /* MyImageClassifier 1.mlmodel */; };
 		57E7B0C42622B19D00D0BE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */; };
 		57E7B0C62622B19D00D0BE79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0C52622B19D00D0BE79 /* SceneDelegate.swift */; };
 		57E7B0C82622B19D00D0BE79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0C72622B19D00D0BE79 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		570F57C62625DE8A0001BDC8 /* SL.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SL.mlmodel; sourceTree = "<group>"; };
 		5789944126241FC0001E1EA3 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		5789944426242033001E1EA3 /* CapturePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
+		57C7F71A263978EF0065DAE3 /* MyImageClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyImageClassifier 1.mlmodel"; sourceTree = "<group>"; };
 		57E7B0C02622B19D00D0BE79 /* SignLanguageProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignLanguageProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E7B0C52622B19D00D0BE79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */,
 				570F57B526246C2E0001BDC8 /* Test1.mlmodel */,
+				57C7F71A263978EF0065DAE3 /* MyImageClassifier 1.mlmodel */,
 				570F57C62625DE8A0001BDC8 /* SL.mlmodel */,
 				57E7B0C52622B19D00D0BE79 /* SceneDelegate.swift */,
 				5789944126241FC0001E1EA3 /* VideoCapture.swift */,
@@ -185,6 +188,7 @@
 				57E7B0DD2622BA0F00D0BE79 /* TabBar1ViewController.swift in Sources */,
 				570F57C72625DE8A0001BDC8 /* SL.mlmodel in Sources */,
 				5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */,
+				57C7F71B263978EF0065DAE3 /* MyImageClassifier 1.mlmodel in Sources */,
 				57E7B0C62622B19D00D0BE79 /* SceneDelegate.swift in Sources */,
 				5704EBF0262422250004BB4D /* CIImage.swift in Sources */,
 				570F57B626246C2E0001BDC8 /* Test1.mlmodel in Sources */,
