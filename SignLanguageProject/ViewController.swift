@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var previewView: CapturePreviewView!
     @IBOutlet weak var classifiedLabel: UILabel!
     
-    let videoCapture : VideoCapture = VideoCapture()
+    let videoCapture: VideoCapture = VideoCapture()
     let context = CIContext()
     let model = MyImageClassifier_1()
     

@@ -11,8 +11,7 @@
 		5704EBF4262425800004BB4D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EBF3262425800004BB4D /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5704EBF6262425850004BB4D /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EBF5262425850004BB4D /* CoreML.framework */; };
 		5704EBF82624258E0004BB4D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EBF72624258E0004BB4D /* CoreVideo.framework */; };
-		570F57B626246C2E0001BDC8 /* Test1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 570F57B526246C2E0001BDC8 /* Test1.mlmodel */; };
-		570F57C72625DE8A0001BDC8 /* SL.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 570F57C62625DE8A0001BDC8 /* SL.mlmodel */; };
+		572274302647B79400D2E4A1 /* TabBarControllerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */; };
 		5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944126241FC0001E1EA3 /* VideoCapture.swift */; };
 		5789944526242033001E1EA3 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944426242033001E1EA3 /* CapturePreviewView.swift */; };
 		57C7F71B263978EF0065DAE3 /* MyImageClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57C7F71A263978EF0065DAE3 /* MyImageClassifier 1.mlmodel */; };
@@ -23,7 +22,6 @@
 		57E7B0CE2622B19D00D0BE79 /* SignLanguageProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0CC2622B19D00D0BE79 /* SignLanguageProject.xcdatamodeld */; };
 		57E7B0D02622B19E00D0BE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E7B0CF2622B19E00D0BE79 /* Assets.xcassets */; };
 		57E7B0D32622B19E00D0BE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E7B0D12622B19E00D0BE79 /* LaunchScreen.storyboard */; };
-		57E7B0DD2622BA0F00D0BE79 /* TabBar1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0DC2622BA0F00D0BE79 /* TabBar1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +29,7 @@
 		5704EBF3262425800004BB4D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5704EBF5262425850004BB4D /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		5704EBF72624258E0004BB4D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		570F57B526246C2E0001BDC8 /* Test1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Test1.mlmodel; sourceTree = "<group>"; };
-		570F57C62625DE8A0001BDC8 /* SL.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SL.mlmodel; sourceTree = "<group>"; };
+		5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerEdit.swift; sourceTree = "<group>"; };
 		5789944126241FC0001E1EA3 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		5789944426242033001E1EA3 /* CapturePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
 		57C7F71A263978EF0065DAE3 /* MyImageClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyImageClassifier 1.mlmodel"; sourceTree = "<group>"; };
@@ -45,7 +42,6 @@
 		57E7B0CF2622B19E00D0BE79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57E7B0D22622B19E00D0BE79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57E7B0D42622B19E00D0BE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57E7B0DC2622BA0F00D0BE79 /* TabBar1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,14 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */,
-				570F57B526246C2E0001BDC8 /* Test1.mlmodel */,
+				5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */,
 				57C7F71A263978EF0065DAE3 /* MyImageClassifier 1.mlmodel */,
-				570F57C62625DE8A0001BDC8 /* SL.mlmodel */,
 				57E7B0C52622B19D00D0BE79 /* SceneDelegate.swift */,
 				5789944126241FC0001E1EA3 /* VideoCapture.swift */,
 				57E7B0C72622B19D00D0BE79 /* ViewController.swift */,
 				5789944426242033001E1EA3 /* CapturePreviewView.swift */,
-				57E7B0DC2622BA0F00D0BE79 /* TabBar1ViewController.swift */,
 				5704EBEF262422250004BB4D /* CIImage.swift */,
 				57E7B0C92622B19D00D0BE79 /* Main.storyboard */,
 				57E7B0CF2622B19E00D0BE79 /* Assets.xcassets */,
@@ -182,16 +176,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E7B0CE2622B19D00D0BE79 /* SignLanguageProject.xcdatamodeld in Sources */,
+				572274302647B79400D2E4A1 /* TabBarControllerEdit.swift in Sources */,
 				57E7B0C82622B19D00D0BE79 /* ViewController.swift in Sources */,
 				5789944526242033001E1EA3 /* CapturePreviewView.swift in Sources */,
 				57E7B0C42622B19D00D0BE79 /* AppDelegate.swift in Sources */,
-				57E7B0DD2622BA0F00D0BE79 /* TabBar1ViewController.swift in Sources */,
-				570F57C72625DE8A0001BDC8 /* SL.mlmodel in Sources */,
 				5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */,
 				57C7F71B263978EF0065DAE3 /* MyImageClassifier 1.mlmodel in Sources */,
 				57E7B0C62622B19D00D0BE79 /* SceneDelegate.swift in Sources */,
 				5704EBF0262422250004BB4D /* CIImage.swift in Sources */,
-				570F57B626246C2E0001BDC8 /* Test1.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

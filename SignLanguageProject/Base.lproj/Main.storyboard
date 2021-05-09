@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tm4-0f-ePY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uiJ-sV-fLT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--2번 화면-->
+        <!--1번 화면-->
         <scene sceneID="J9A-Wv-9nM">
             <objects>
                 <tableViewController id="KyI-xs-OTL" sceneMemberID="viewController">
@@ -32,43 +32,17 @@
                             <outlet property="delegate" destination="KyI-xs-OTL" id="OEH-4g-h3Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="2번 화면" id="GQA-WQ-eej"/>
+                    <navigationItem key="navigationItem" title="1번 화면" id="GQA-WQ-eej"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1m-hj-2GO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="31"/>
+            <point key="canvasLocation" x="148" y="-966"/>
         </scene>
         <!--1번 화면-->
-        <scene sceneID="rVI-uT-ubX">
-            <objects>
-                <viewController id="Mri-WJ-6cO" customClass="TabBar2ViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WHK-5R-YBI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peY-Kk-a5i">
-                                <rect key="frame" x="171" y="743" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="촬영하기"/>
-                                <connections>
-                                    <action selector="btnCamera:" destination="Mri-WJ-6cO" eventType="touchUpInside" id="LGa-q9-gIp"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="R5d-ar-otc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="1번 화면" id="ti2-Lf-lMw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sKk-9P-i80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="588" y="-769"/>
-        </scene>
-        <!--2번 화면-->
         <scene sceneID="5VV-K7-HlH">
             <objects>
                 <navigationController id="g7R-qf-bRu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="2번 화면" id="swt-Ij-FbL"/>
+                    <tabBarItem key="tabBarItem" title="1번 화면" id="swt-Ij-FbL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9T-y1-tsn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,12 +53,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeR-Ti-gvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="31"/>
+            <point key="canvasLocation" x="-632" y="-966"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Controller Main-->
         <scene sceneID="jbE-X4-NaX">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uiJ-sV-fLT" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uiJ-sV-fLT" customClass="TabBarControllerMain" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hIK-9r-89w">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -92,16 +66,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Mri-WJ-6cO" kind="relationship" relationship="viewControllers" id="ZpZ-y9-YND"/>
                         <segue destination="g7R-qf-bRu" kind="relationship" relationship="viewControllers" id="JGJ-GM-PUd"/>
                         <segue destination="Wd6-2j-Wlt" kind="relationship" relationship="viewControllers" id="Mhb-Lz-7kL"/>
+                        <segue destination="tm4-0f-ePY" kind="relationship" relationship="viewControllers" id="rAP-pG-O2L"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxk-CL-FI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-465.21739130434787" y="-430.58035714285711"/>
+            <point key="canvasLocation" x="-2039" y="-660"/>
         </scene>
-        <!--Item-->
+        <!--통역 화면-->
         <scene sceneID="MwM-0c-GPP">
             <objects>
                 <viewController id="tm4-0f-ePY" customClass="ViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,12 +84,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A6w-aE-ls5" customClass="CapturePreviewView" customModule="SignLanguageProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="51" width="414" height="672"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="인식된 수어를 텍스트로 알려줄 위치" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liy-Ua-8c0">
-                                <rect key="frame" x="0.0" y="804" width="414" height="92"/>
+                                <rect key="frame" x="0.0" y="731" width="414" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -125,7 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="aAb-Ok-OwL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="WKX-BL-dWs"/>
+                    <tabBarItem key="tabBarItem" title="통역 화면" id="WKX-BL-dWs"/>
                     <connections>
                         <outlet property="classifiedLabel" destination="liy-Ua-8c0" id="eQx-sy-2s7"/>
                         <outlet property="previewView" destination="A6w-aE-ls5" id="gUr-nI-wbN"/>
@@ -133,9 +107,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bou-nC-yqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2083" y="-380"/>
+            <point key="canvasLocation" x="147.82608695652175" y="386.38392857142856"/>
         </scene>
-        <!--3번 화면-->
+        <!--2번 화면-->
         <scene sceneID="Gyy-eg-osf">
             <objects>
                 <viewController id="Wd6-2j-Wlt" sceneMemberID="viewController">
@@ -145,11 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="shy-nA-hbk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="3번 화면" id="Evy-Bz-DsY"/>
+                    <tabBarItem key="tabBarItem" title="2번 화면" id="Evy-Bz-DsY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHy-6l-EOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-609" y="347"/>
+            <point key="canvasLocation" x="148" y="-299"/>
         </scene>
     </scenes>
     <resources>
