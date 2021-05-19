@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-632" y="-966"/>
         </scene>
-        <!--Table View Controller-->
+        <!--원주시 장애인 복지시설-->
         <scene sceneID="Tsm-1E-yQ6">
             <objects>
                 <viewController id="4fM-dl-glt" customClass="TableViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,13 +39,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="apiCell" id="Lcj-Bq-lKt">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="apiCell" rowHeight="45" id="Lcj-Bq-lKt" customClass="ApiCell" customModule="SignLanguageProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lcj-Bq-lKt" id="KMk-EZ-3sK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시설명 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuX-IK-TeM">
+                                                    <rect key="frame" x="14" y="0.0" width="320" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-ZZ-NRi">
+                                                    <rect key="frame" x="14" y="22" width="320" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="address" destination="Xby-ZZ-NRi" id="gR4-vh-U6M"/>
+                                            <outlet property="name" destination="TuX-IK-TeM" id="RCi-Pj-ZiZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -53,7 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="TeU-4W-baM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Co7-bX-jCN"/>
+                    <navigationItem key="navigationItem" title="원주시 장애인 복지시설" id="cek-2u-YdN"/>
                     <connections>
                         <outlet property="tableView" destination="aQy-1T-N0n" id="7qJ-JQ-bQA"/>
                     </connections>
