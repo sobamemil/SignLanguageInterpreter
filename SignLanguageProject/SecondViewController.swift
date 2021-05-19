@@ -51,7 +51,7 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func startRecording() {
-       //인식 작업이 실행 중인지 확인합니다. 이 경우 작업과 인식을 취소합니다.
+       //인식 작업이 실행 중인지 확인합니다. 이 경우 작업과 인식을 취소
        if recognitionTask != nil {
 
            recognitionTask?.cancel()
