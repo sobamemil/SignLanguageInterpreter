@@ -10,6 +10,7 @@ import UIKit
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var btnMore: UIButton!
     
     private let test: Array<String> = ["1", "2", "3", "4", "5"]
     
@@ -48,6 +49,21 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         return cell
     }
+    
+
+    @IBAction func clickMore(_ sender: Any) {
+        // page 값을 하나 올림
+        self.page += 1
+        
+        // 다음 페이지의 api를 호출
+        self.callAPI()
+        
+        // 테이블 뷰를 갱신
+        self.tableView.reloadData()
+        
+    }
+    
+    
     
     func callAPI() {
         // URI 생성
@@ -98,10 +114,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 // 전체 데이터 카운트를 얻는다.
                 let totalCount = (apiDictionary["totalCount"] as? Int64)!
                 
-//                // 8) totalCount가 읽어온 데이터 크기와 같거나 클 경우 더보기 버튼을 막는다.
-//                if (self.list.count >= totalCount){
-//                    self.moreBtn.isHidden = true
-//                }
+                // totalCount가 읽어온 데이터 크기와 같거나 클 경우 더보기 버튼을 막는다.
+                if (self.list.count >= totalCount){
+                    self.btnMore.isHidden = true
+                }
             }
         }catch { NSLog("Parse Error!!")}
         
