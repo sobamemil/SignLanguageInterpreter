@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     let videoCapture: VideoCapture = VideoCapture()
     let context = CIContext()
-    let model = MyImageClassifier_1()
+    let model = alphabetClassification_1()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,11 @@ extension ViewController : VideoCaptureDelegate{
         
         //레이블 업데이트
         DispatchQueue.main.async {
-            self.classifiedLabel.text = prediction?.classLabel ?? "탐지 불가..."
+            self.classifiedLabel.text! += prediction!.classLabel
+            
+            if(self.classifiedLabel.text!.count > 30) {
+                self.classifiedLabel.text = ""
+            }
         }
         
     }
