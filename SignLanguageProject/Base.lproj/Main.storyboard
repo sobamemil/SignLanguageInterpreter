@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Pcx-2b-3vR">
-                                    <rect key="frame" x="0.0" y="104.00000034679067" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="111.00000034679067" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="더보기"/>
                                     <connections>
@@ -47,11 +47,11 @@
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="apiCell" rowHeight="55" id="Lcj-Bq-lKt" customClass="ApiCell" customModule="SignLanguageProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="55"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="apiCell" rowHeight="62" id="Lcj-Bq-lKt" customClass="ApiCell" customModule="SignLanguageProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lcj-Bq-lKt" id="KMk-EZ-3sK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시설명 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuX-IK-TeM">
@@ -85,11 +85,37 @@
                     <connections>
                         <outlet property="btnMore" destination="Pcx-2b-3vR" id="foj-jr-0aT"/>
                         <outlet property="tableView" destination="aQy-1T-N0n" id="7qJ-JQ-bQA"/>
+                        <segue destination="2Y0-6b-REd" kind="show" identifier="toWonjuSecondView" id="gD1-92-o4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1t1-qM-8T1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="127.53623188405798" y="-966.29464285714278"/>
+        </scene>
+        <!--Wonju Second View Controller-->
+        <scene sceneID="NYB-RU-Eah">
+            <objects>
+                <viewController storyboardIdentifier="wonjuSecond" id="2Y0-6b-REd" customClass="WonjuSecondViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GqD-6b-B3H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상세정보 구현예정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMf-IC-jhb">
+                                <rect key="frame" x="146" y="150" width="122" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SIj-QJ-F1e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6PQ-e5-XlK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9I-fG-Z4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-966"/>
         </scene>
         <!--Tab Bar Controller Main-->
         <scene sceneID="jbE-X4-NaX">
@@ -143,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bou-nC-yqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147.82608695652175" y="386.38392857142856"/>
+            <point key="canvasLocation" x="128" y="388"/>
         </scene>
         <!--2번 화면-->
         <scene sceneID="Gyy-eg-osf">
@@ -159,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHy-6l-EOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="-299"/>
+            <point key="canvasLocation" x="128" y="-307"/>
         </scene>
     </scenes>
     <resources>

@@ -16,6 +16,7 @@
 		5706651C2654EA9D00CA83E5 /* ApiVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5706651B2654EA9D00CA83E5 /* ApiVO.swift */; };
 		5706651E2654ED2000CA83E5 /* ApiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5706651D2654ED2000CA83E5 /* ApiCell.swift */; };
 		570665202654F59A00CA83E5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5706651F2654F59A00CA83E5 /* WebKit.framework */; };
+		570665222654FC3900CA83E5 /* WonjuSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570665212654FC3900CA83E5 /* WonjuSecondViewController.swift */; };
 		572274302647B79400D2E4A1 /* TabBarControllerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */; };
 		5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944126241FC0001E1EA3 /* VideoCapture.swift */; };
 		5789944526242033001E1EA3 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944426242033001E1EA3 /* CapturePreviewView.swift */; };
@@ -39,6 +40,7 @@
 		5706651B2654EA9D00CA83E5 /* ApiVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiVO.swift; sourceTree = "<group>"; };
 		5706651D2654ED2000CA83E5 /* ApiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCell.swift; sourceTree = "<group>"; };
 		5706651F2654F59A00CA83E5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		570665212654FC3900CA83E5 /* WonjuSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonjuSecondViewController.swift; sourceTree = "<group>"; };
 		5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerEdit.swift; sourceTree = "<group>"; };
 		5789944126241FC0001E1EA3 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		5789944426242033001E1EA3 /* CapturePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				57E7B0C72622B19D00D0BE79 /* ViewController.swift */,
 				5789944426242033001E1EA3 /* CapturePreviewView.swift */,
 				570665192654D22800CA83E5 /* TableViewController.swift */,
+				570665212654FC3900CA83E5 /* WonjuSecondViewController.swift */,
 				5706651B2654EA9D00CA83E5 /* ApiVO.swift */,
 				5704EBEF262422250004BB4D /* CIImage.swift */,
 				5706651D2654ED2000CA83E5 /* ApiCell.swift */,
@@ -193,6 +196,7 @@
 			files = (
 				57E7B0CE2622B19D00D0BE79 /* SignLanguageProject.xcdatamodeld in Sources */,
 				5706651E2654ED2000CA83E5 /* ApiCell.swift in Sources */,
+				570665222654FC3900CA83E5 /* WonjuSecondViewController.swift in Sources */,
 				5706651C2654EA9D00CA83E5 /* ApiVO.swift in Sources */,
 				572274302647B79400D2E4A1 /* TabBarControllerEdit.swift in Sources */,
 				57E7B0C82622B19D00D0BE79 /* ViewController.swift in Sources */,

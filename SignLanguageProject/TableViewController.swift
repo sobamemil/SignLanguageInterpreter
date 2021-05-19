@@ -12,8 +12,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnMore: UIButton!
     
-    private let test: Array<String> = ["1", "2", "3", "4", "5"]
-    
     private var page = 1 // 현재까지 읽은 페이지 개수
     
     lazy var list: [ApiVO] = {
@@ -48,6 +46,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.address?.text = "주소 : " + row.address!
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toWonjuSecondView", sender: nil)
     }
     
 
@@ -120,7 +122,5 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
         }catch { NSLog("Parse Error!!")}
-        
     }
-
 }
