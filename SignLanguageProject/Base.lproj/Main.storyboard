@@ -174,18 +174,39 @@
         <!--2번 화면-->
         <scene sceneID="Gyy-eg-osf">
             <objects>
-                <viewController id="Wd6-2j-Wlt" sceneMemberID="viewController">
+                <viewController id="Wd6-2j-Wlt" customClass="SecondViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t1U-uZ-sF0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2e-sb-5XX">
+                                <rect key="frame" x="67" y="166" width="279" height="482"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ9-07-r3q">
+                                <rect key="frame" x="159" y="735" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="녹음하기"/>
+                                <connections>
+                                    <action selector="clickRecordButton:" destination="Wd6-2j-Wlt" eventType="touchUpInside" id="1EN-0V-ntL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="shy-nA-hbk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="2번 화면" id="Evy-Bz-DsY"/>
+                    <connections>
+                        <outlet property="btnRecord" destination="bQ9-07-r3q" id="OCY-MZ-7G0"/>
+                        <outlet property="lbTestLabel" destination="Q2e-sb-5XX" id="w5v-oz-75h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHy-6l-EOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="-307"/>
+            <point key="canvasLocation" x="127.53623188405798" y="-307.36607142857139"/>
         </scene>
     </scenes>
     <resources>
