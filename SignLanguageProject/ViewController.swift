@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     let videoCapture: VideoCapture = VideoCapture()
     let context = CIContext()
-    let model = alphabetClassification_1()
+    let model = alphabetClassification_2()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         self.videoCapture.delegate = self
 
         
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         if self.videoCapture.initCamera(){
             (self.previewView.layer as! AVCaptureVideoPreviewLayer).session =
                 self.videoCapture.captureSession
@@ -36,6 +40,10 @@ class ViewController: UIViewController {
         }else{
             fatalError("Fail to init Video Capture")
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.videoCapture.asyncStopCapturing()
     }
 }
 
@@ -53,9 +61,13 @@ extension ViewController : VideoCaptureDelegate{
         
         //레이블 업데이트
         DispatchQueue.main.async {
-            self.classifiedLabel.text! += prediction!.classLabel
             
-            if(self.classifiedLabel.text!.count > 30) {
+            if((prediction?.classLabelProbs[prediction!.classLabel])! > 0.99) {
+                self.classifiedLabel.text! += prediction!.classLabel
+                print(prediction!.classLabel)
+            }
+            
+            if(self.classifiedLabel.text!.count > 40) {
                 self.classifiedLabel.text = ""
             }
         }
