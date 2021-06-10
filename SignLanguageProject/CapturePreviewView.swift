@@ -13,6 +13,4 @@ class CapturePreviewView: UIView {
        override class var layerClass: AnyClass{
            return AVCaptureVideoPreviewLayer.self //동영상 프레임을 처리하기 위한 것이다
        }
-    
-    
 }

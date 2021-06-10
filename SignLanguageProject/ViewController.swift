@@ -21,11 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.videoCapture.delegate = self
-
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
