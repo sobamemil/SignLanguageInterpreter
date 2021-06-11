@@ -57,19 +57,17 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
             }
             
             // 비디오 파일명을 사용하여 비디오가 저장된 앱 내부의 파일 경로를 받아온다.
-                  let filePath:String? = Bundle.main.path(forResource: filename, ofType: "mov")
-                  
-                  //앱내부의 파일명을 nsurl형식으로 변경한다.
-                  let url = NSURL(fileURLWithPath: filePath!)
-//
-//            // 앱 내부의 파일명을 NSURL 형식으로 변경
-//            guard let file = filePath else {
-//                print("File Path : \(filePath)")
-//                print("파일 경로가 잘못 지정되었습니다.")
-//                return
-//            }
+            let filePath:String? = Bundle.main.path(forResource: filename, ofType: "mov")
+
+            // 앱 내부의 파일명을 NSURL 형식으로 변경
+            guard let file = filePath else {
+                print("File Path : \(String(describing: filePath))")
+                print("파일 경로가 잘못 지정되었습니다.")
+                return
+            }
             
-            // let url = NSURL(fileURLWithPath: file)
+            //앱내부의 파일명을 nsurl형식으로 변경한다.
+            let url = NSURL(fileURLWithPath: file)
             
             playVideo(url: url) // 앞에서 얻은 url을 사용하여 비디오를 재생
             
@@ -79,7 +77,6 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
             startRecording()
 
             btnRecord.setTitle("녹음중지", for: .normal)
-
         }
     }
     
@@ -189,5 +186,10 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
             }
             
         }
+    
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        print("Video Finished")
+        self.presentedViewController?.dismiss(animated: true, completion: nil)
+    }
     
 }
