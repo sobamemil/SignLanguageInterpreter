@@ -6,12 +6,19 @@
 //
 
 import UIKit
+import AVKit
 import Speech
 
 class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
     
+    var word: String?
+    
     @IBOutlet weak var btnRecord: UIButton!
-    @IBOutlet weak var lbTestLabel: UILabel!
+    @IBOutlet weak var lbTestLabel: UILabel! {
+        didSet {
+            lbTestLabel.text = "녹음하기"
+        }
+    }
     
     // 어느 언어를 지원하도록 할 것인지 설정
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ko-KR"))
@@ -35,17 +42,43 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
         if audioEngine.isRunning { // 현재 음성인식이 수행중이라면
 
             audioEngine.stop() // 오디오 입력을 중단한다.
-
+            
             recognitionRequest?.endAudio() // 음성인식 역시 중단
 
             btnRecord.isEnabled = false
 
             btnRecord.setTitle("녹음하기", for: .normal)
+            
+            // 영상 재생
+            // 비디오 파일명을 사용하여 비디오가 저장된 앱 내부의 파일 경로를 받아옴
+            guard let filename = self.word else {
+                print("파일 이름이 잘못되었습니다.")
+                return
+            }
+            
+            // 비디오 파일명을 사용하여 비디오가 저장된 앱 내부의 파일 경로를 받아온다.
+                  let filePath:String? = Bundle.main.path(forResource: filename, ofType: "mov")
+                  
+                  //앱내부의 파일명을 nsurl형식으로 변경한다.
+                  let url = NSURL(fileURLWithPath: filePath!)
+//
+//            // 앱 내부의 파일명을 NSURL 형식으로 변경
+//            guard let file = filePath else {
+//                print("File Path : \(filePath)")
+//                print("파일 경로가 잘못 지정되었습니다.")
+//                return
+//            }
+            
+            // let url = NSURL(fileURLWithPath: file)
+            
+            playVideo(url: url) // 앞에서 얻은 url을 사용하여 비디오를 재생
+            
+            self.word = nil
 
         } else {
             startRecording()
 
-            btnRecord.setTitle("녹음 중지", for: .normal)
+            btnRecord.setTitle("녹음중지", for: .normal)
 
         }
     }
@@ -97,8 +130,9 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
 
                 self.lbTestLabel.text = result?.bestTranscription.formattedString
 
+                self.word = self.lbTestLabel.text
+                
                 isFinal = (result?.isFinal)!
-
             }
 
             //오류가 없거나 최종 결과가 나오면 audioEngine (오디오 입력)을 중지하고 인식 요청 및 인식 작업을 중지합니다. 동시에 녹음 시작 버튼을 활성화합니다.
@@ -133,5 +167,27 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
 
         lbTestLabel.text = "말하면 텍스트로 바꿔줍니다!"
     }
+    
+    // MARK:- 영상 재생 부분
+    private func playVideo(url: NSURL){
+            
+            // AVPlayerController의 인스턴스 생성
+            let playerController = AVPlayerViewController()
+        
+            // 비디오 URL로 초기화된 AVPlayer의 인스턴스 생성
+            let player = AVPlayer(url: url as URL)
+        
+            // AVPlayerViewController의 player 속성에 위에서 생성한 AVPlayer 인스턴스를 할당
+            playerController.player = player
+        
+            // avplayer observer 추가
+            NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+
+            self.present(playerController, animated: true){
+                player.play() // 비디오 재생
+
+            }
+            
+        }
     
 }

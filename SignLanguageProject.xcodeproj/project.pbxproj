@@ -20,6 +20,7 @@
 		5706EECD26554E9000351C97 /* alphabetClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5706EECC26554E8F00351C97 /* alphabetClassification 1.mlmodel */; };
 		5706EECF26562C7C00351C97 /* alphabetClassification_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5706EECE26562C7C00351C97 /* alphabetClassification_2.mlmodel */; };
 		572274302647B79400D2E4A1 /* TabBarControllerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */; };
+		57460A3F26733B200000760E /* 장난감.mov in Resources */ = {isa = PBXBuildFile; fileRef = 57460A3E26733B200000760E /* 장난감.mov */; };
 		5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944126241FC0001E1EA3 /* VideoCapture.swift */; };
 		5789944526242033001E1EA3 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944426242033001E1EA3 /* CapturePreviewView.swift */; };
 		57E7B0C42622B19D00D0BE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		5706EECC26554E8F00351C97 /* alphabetClassification 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "alphabetClassification 1.mlmodel"; sourceTree = "<group>"; };
 		5706EECE26562C7C00351C97 /* alphabetClassification_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = alphabetClassification_2.mlmodel; sourceTree = "<group>"; };
 		5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerEdit.swift; sourceTree = "<group>"; };
+		57460A3E26733B200000760E /* 장난감.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "장난감.mov"; sourceTree = "<group>"; };
 		5789944126241FC0001E1EA3 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		5789944426242033001E1EA3 /* CapturePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
 		57E7B0C02622B19D00D0BE79 /* SignLanguageProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignLanguageProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		57460A35267332C80000760E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				57460A36267332E00000760E /* 장난감 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		57460A36267332E00000760E /* 장난감 */ = {
+			isa = PBXGroup;
+			children = (
+				57460A3E26733B200000760E /* 장난감.mov */,
+			);
+			path = "장난감";
+			sourceTree = "<group>";
+		};
 		57E7B0B72622B19D00D0BE79 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +122,7 @@
 		57E7B0C22622B19D00D0BE79 /* SignLanguageProject */ = {
 			isa = PBXGroup;
 			children = (
+				57460A35267332C80000760E /* Resources */,
 				57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */,
 				5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */,
 				5706EECC26554E8F00351C97 /* alphabetClassification 1.mlmodel */,
@@ -184,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57460A3F26733B200000760E /* 장난감.mov in Resources */,
 				57E7B0D32622B19E00D0BE79 /* LaunchScreen.storyboard in Resources */,
 				57E7B0D02622B19E00D0BE79 /* Assets.xcassets in Resources */,
 				57E7B0CB2622B19D00D0BE79 /* Main.storyboard in Resources */,
