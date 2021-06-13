@@ -189,6 +189,8 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     @objc func playerDidFinishPlaying(note: NSNotification) {
         print("Video Finished")
+        
+        // 현재 떠있는 동영상 플레이어를 내림
         self.presentedViewController?.dismiss(animated: true, completion: nil)
     }
     
