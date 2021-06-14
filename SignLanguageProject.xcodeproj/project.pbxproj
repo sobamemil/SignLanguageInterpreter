@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57029C7F26779EA800C21A97 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57029C7E26779EA800C21A97 /* Api.swift */; };
 		5704EBF0262422250004BB4D /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704EBEF262422250004BB4D /* CIImage.swift */; };
 		5704EBF4262425800004BB4D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EBF3262425800004BB4D /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5704EBF6262425850004BB4D /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5704EBF5262425850004BB4D /* CoreML.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57029C7E26779EA800C21A97 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		5704EBEF262422250004BB4D /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 		5704EBF3262425800004BB4D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5704EBF5262425850004BB4D /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
@@ -137,6 +139,7 @@
 				5704EBEF262422250004BB4D /* CIImage.swift */,
 				5706651D2654ED2000CA83E5 /* ApiCell.swift */,
 				57E7B0C92622B19D00D0BE79 /* Main.storyboard */,
+				57029C7E26779EA800C21A97 /* Api.swift */,
 				570665232655039600CA83E5 /* SecondViewController.swift */,
 				57E7B0CF2622B19E00D0BE79 /* Assets.xcassets */,
 				57E7B0D12622B19E00D0BE79 /* LaunchScreen.storyboard */,
@@ -231,6 +234,7 @@
 				5706EECF26562C7C00351C97 /* alphabetClassification_2.mlmodel in Sources */,
 				57E7B0C62622B19D00D0BE79 /* SceneDelegate.swift in Sources */,
 				570665242655039600CA83E5 /* SecondViewController.swift in Sources */,
+				57029C7F26779EA800C21A97 /* Api.swift in Sources */,
 				5704EBF0262422250004BB4D /* CIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
