@@ -4,6 +4,7 @@
 //
 //  Created by 심찬영 on 2021/05/19.
 //
+// DB 스키마 설계
 
 import Foundation
 import UIKit
