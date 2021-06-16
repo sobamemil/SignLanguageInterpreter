@@ -187,6 +187,7 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
             
         }
     
+    // 동영상 재생창이 끝나면 실행
     @objc func playerDidFinishPlaying(note: NSNotification) {
         print("Video Finished")
         

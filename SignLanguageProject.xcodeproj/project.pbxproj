@@ -31,9 +31,11 @@
 		57E7B0CE2622B19D00D0BE79 /* SignLanguageProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0CC2622B19D00D0BE79 /* SignLanguageProject.xcdatamodeld */; };
 		57E7B0D02622B19E00D0BE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E7B0CF2622B19E00D0BE79 /* Assets.xcassets */; };
 		57E7B0D32622B19E00D0BE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E7B0D12622B19E00D0BE79 /* LaunchScreen.storyboard */; };
+		B78516263345F5E41A1216CD /* Pods_SignLanguageProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DDCB82BC3AC0C0BC1ED3E6 /* Pods_SignLanguageProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CD55571C5AB9E2C2F380965 /* Pods-SignLanguageProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignLanguageProject.release.xcconfig"; path = "Target Support Files/Pods-SignLanguageProject/Pods-SignLanguageProject.release.xcconfig"; sourceTree = "<group>"; };
 		57029C7E26779EA800C21A97 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		5704EBEF262422250004BB4D /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 		5704EBF3262425800004BB4D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +62,8 @@
 		57E7B0CF2622B19E00D0BE79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57E7B0D22622B19E00D0BE79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57E7B0D42622B19E00D0BE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C9965FC04C50FED69C93538 /* Pods-SignLanguageProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignLanguageProject.debug.xcconfig"; path = "Target Support Files/Pods-SignLanguageProject/Pods-SignLanguageProject.debug.xcconfig"; sourceTree = "<group>"; };
+		E8DDCB82BC3AC0C0BC1ED3E6 /* Pods_SignLanguageProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignLanguageProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +75,23 @@
 				5704EBF82624258E0004BB4D /* CoreVideo.framework in Frameworks */,
 				5704EBF6262425850004BB4D /* CoreML.framework in Frameworks */,
 				5704EBF4262425800004BB4D /* AVFoundation.framework in Frameworks */,
+				B78516263345F5E41A1216CD /* Pods_SignLanguageProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		386FD46964DE0FE5E71F5F90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C9965FC04C50FED69C93538 /* Pods-SignLanguageProject.debug.xcconfig */,
+				4CD55571C5AB9E2C2F380965 /* Pods-SignLanguageProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5704EBF2262425800004BB4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +99,7 @@
 				5704EBF72624258E0004BB4D /* CoreVideo.framework */,
 				5704EBF5262425850004BB4D /* CoreML.framework */,
 				5704EBF3262425800004BB4D /* AVFoundation.framework */,
+				E8DDCB82BC3AC0C0BC1ED3E6 /* Pods_SignLanguageProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +126,7 @@
 				57E7B0C22622B19D00D0BE79 /* SignLanguageProject */,
 				57E7B0C12622B19D00D0BE79 /* Products */,
 				5704EBF2262425800004BB4D /* Frameworks */,
+				386FD46964DE0FE5E71F5F90 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57E7B0D72622B19E00D0BE79 /* Build configuration list for PBXNativeTarget "SignLanguageProject" */;
 			buildPhases = (
+				C75376F5BC88B12957676363 /* [CP] Check Pods Manifest.lock */,
 				57E7B0BC2622B19D00D0BE79 /* Sources */,
 				57E7B0BD2622B19D00D0BE79 /* Frameworks */,
 				57E7B0BE2622B19D00D0BE79 /* Resources */,
+				B2AB1A2373C5129CC2E9BD6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +233,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B2AB1A2373C5129CC2E9BD6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SignLanguageProject/Pods-SignLanguageProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SignLanguageProject/Pods-SignLanguageProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SignLanguageProject/Pods-SignLanguageProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C75376F5BC88B12957676363 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignLanguageProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		57E7B0BC2622B19D00D0BE79 /* Sources */ = {
@@ -379,6 +440,7 @@
 		};
 		57E7B0D82622B19E00D0BE79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C9965FC04C50FED69C93538 /* Pods-SignLanguageProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,6 +461,7 @@
 		};
 		57E7B0D92622B19E00D0BE79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD55571C5AB9E2C2F380965 /* Pods-SignLanguageProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
