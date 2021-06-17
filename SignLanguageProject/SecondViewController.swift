@@ -8,10 +8,16 @@
 import UIKit
 import AVKit
 import Speech
+import Alamofire
 
 class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     var word: String?
+    var i = 0
+    var count = 0
+    var files = [String]()
+    var filePath: String?
+    var flag: Bool = false
     
     @IBOutlet weak var btnRecord: UIButton!
     @IBOutlet weak var lbTestLabel: UILabel! {
@@ -38,6 +44,8 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
         speechRecognizer?.delegate = self
     }
     
+    
+    
     @IBAction func clickRecordButton(_ sender: Any) {
         if audioEngine.isRunning { // 현재 음성인식이 수행중이라면
 
@@ -56,25 +64,44 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
                 return
             }
             
-            // 비디오 파일명을 사용하여 비디오가 저장된 앱 내부의 파일 경로를 받아온다.
-            let filePath:String? = Bundle.main.path(forResource: filename, ofType: "mov")
+            print(filename)
+            
+            // var fileNames = [String]()
+            let api = Api()
+            
+            api.apiSerch(str: filename) { (fileNames) -> Void in
+                self.count = fileNames.count
+                self.files = fileNames
+                
+                // 비디오 파일명을 사용하여 비디오가 저장된 앱 내부의 파일 경로를 받아온다.
+                self.filePath = Bundle.main.path(forResource: self.files[self.i], ofType: "mov")
+                print("파일이름 : \(self.files[self.i])")
 
-            // 앱 내부의 파일명을 NSURL 형식으로 변경
-            guard let file = filePath else {
-                print("File Path : \(String(describing: filePath))")
-                print("파일 경로가 잘못 지정되었습니다.")
-                return
+                
+                // 앱 내부의 파일명을 NSURL 형식으로 변경
+                guard let file = self.filePath else {
+                    print("파일 경로가 잘못 지정되었습니다.")
+                    print("First File Path : \(String(describing: self.filePath))")
+                    self.filePath = nil
+                    return
+                }
+
+                //앱내부의 파일명을 nsurl형식으로 변경한다.
+                let url = NSURL(fileURLWithPath: file)
+
+                self.i += 1
+                self.playVideo(url: url) // 앞에서 얻은 url을 사용하여 비디오를 재생
+                self.word = nil
+                self.filePath = nil
             }
-            
-            //앱내부의 파일명을 nsurl형식으로 변경한다.
-            let url = NSURL(fileURLWithPath: file)
-            
-            playVideo(url: url) // 앞에서 얻은 url을 사용하여 비디오를 재생
-            
-            self.word = nil
 
         } else {
             startRecording()
+            
+            self.i = 0
+            self.count = 0
+            self.files = [String]()
+            self.filePath = nil
 
             btnRecord.setTitle("녹음중지", for: .normal)
         }
@@ -88,7 +115,6 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
 
            recognitionTask = nil
        }
-        
         // 오디오 세션 설정
         let audioSession = AVAudioSession.sharedInstance()
         do {
@@ -98,12 +124,12 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
         } catch {
             print("audioSession properties weren't set because of an error.")
         }
-        
+
         // recognitionRequest를 인스턴스화
         // SFSpeechAudioBufferRecognitionRequest 객체를 생성
         // 오디오 데이터를 Apple 서버에 전달하는 데 사용
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-
+        
         // audioEngine(장치)에 녹음 할 오디오 입력이 있는지 확인
         // 없는 경우 오류가 발생
         let inputNode = audioEngine.inputNode
@@ -182,17 +208,36 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
 
             self.present(playerController, animated: true){
                 player.play() // 비디오 재생
-
+                self.flag = false
             }
-            
         }
     
     // 동영상 재생창이 끝나면 실행
     @objc func playerDidFinishPlaying(note: NSNotification) {
-        print("Video Finished")
-        
-        // 현재 떠있는 동영상 플레이어를 내림
-        self.presentedViewController?.dismiss(animated: true, completion: nil)
+        if(!self.flag) {
+            self.flag = true
+            print("Video Finished")
+            
+            // 현재 떠있는 동영상 플레이어를 내림
+            self.presentedViewController?.dismiss(animated: true, completion: nil)
+            if self.i < count {
+                print("self.i : \(self.i), count : \(count)")
+                // 비디오 파일명을 사용하여 비디오가 저장된 앱 내부의 파일 경로를 받아온다.
+                self.filePath = Bundle.main.path(forResource: self.files[self.i], ofType: "mov")
+                print("파일이름 : \(self.files[self.i])")
+
+                // 앱 내부의 파일명을 NSURL 형식으로 변경
+                guard let file = filePath else {
+                    print("파일 경로가 잘못 지정되었습니다.")
+                    print("Rest File Path : \(String(describing: self.filePath))")
+                    
+                    self.filePath = nil
+                    return
+                }
+                self.i += i
+                playVideo(url: NSURL(fileURLWithPath: file))
+                self.filePath = nil
+            }
+        }
     }
-    
 }

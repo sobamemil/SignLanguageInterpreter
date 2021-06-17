@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,9 @@
 		5706EECD26554E9000351C97 /* alphabetClassification 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5706EECC26554E8F00351C97 /* alphabetClassification 1.mlmodel */; };
 		5706EECF26562C7C00351C97 /* alphabetClassification_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5706EECE26562C7C00351C97 /* alphabetClassification_2.mlmodel */; };
 		572274302647B79400D2E4A1 /* TabBarControllerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */; };
-		57460A3F26733B200000760E /* 장난감.mov in Resources */ = {isa = PBXBuildFile; fileRef = 57460A3E26733B200000760E /* 장난감.mov */; };
+		576EE9B7267BA378001FE8E7 /* 고속도로.mov in Resources */ = {isa = PBXBuildFile; fileRef = 576EE9B6267BA378001FE8E7 /* 고속도로.mov */; };
+		576EE9BD267BA3B0001FE8E7 /* 불.mov in Resources */ = {isa = PBXBuildFile; fileRef = 576EE9B9267BA3B0001FE8E7 /* 불.mov */; };
+		576EE9BE267BA3B0001FE8E7 /* 강서구.mov in Resources */ = {isa = PBXBuildFile; fileRef = 576EE9BC267BA3B0001FE8E7 /* 강서구.mov */; };
 		5789944226241FC0001E1EA3 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944126241FC0001E1EA3 /* VideoCapture.swift */; };
 		5789944526242033001E1EA3 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789944426242033001E1EA3 /* CapturePreviewView.swift */; };
 		57E7B0C42622B19D00D0BE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7B0C32622B19D00D0BE79 /* AppDelegate.swift */; };
@@ -51,6 +53,9 @@
 		5706EECE26562C7C00351C97 /* alphabetClassification_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = alphabetClassification_2.mlmodel; sourceTree = "<group>"; };
 		5722742F2647B79400D2E4A1 /* TabBarControllerEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerEdit.swift; sourceTree = "<group>"; };
 		57460A3E26733B200000760E /* 장난감.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "장난감.mov"; sourceTree = "<group>"; };
+		576EE9B6267BA378001FE8E7 /* 고속도로.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "고속도로.mov"; sourceTree = "<group>"; };
+		576EE9B9267BA3B0001FE8E7 /* 불.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "불.mov"; sourceTree = "<group>"; };
+		576EE9BC267BA3B0001FE8E7 /* 강서구.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "강서구.mov"; sourceTree = "<group>"; };
 		5789944126241FC0001E1EA3 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		5789944426242033001E1EA3 /* CapturePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
 		57E7B0C02622B19D00D0BE79 /* SignLanguageProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignLanguageProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +93,6 @@
 				6C9965FC04C50FED69C93538 /* Pods-SignLanguageProject.debug.xcconfig */,
 				4CD55571C5AB9E2C2F380965 /* Pods-SignLanguageProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,6 +111,9 @@
 		57460A35267332C80000760E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				576EE9BB267BA3B0001FE8E7 /* 강서구 */,
+				576EE9B8267BA3B0001FE8E7 /* 불 */,
+				576EE9B5267BA378001FE8E7 /* 고속도로 */,
 				57460A36267332E00000760E /* 장난감 */,
 			);
 			path = Resources;
@@ -118,6 +125,30 @@
 				57460A3E26733B200000760E /* 장난감.mov */,
 			);
 			path = "장난감";
+			sourceTree = "<group>";
+		};
+		576EE9B5267BA378001FE8E7 /* 고속도로 */ = {
+			isa = PBXGroup;
+			children = (
+				576EE9B6267BA378001FE8E7 /* 고속도로.mov */,
+			);
+			path = "고속도로";
+			sourceTree = "<group>";
+		};
+		576EE9B8267BA3B0001FE8E7 /* 불 */ = {
+			isa = PBXGroup;
+			children = (
+				576EE9B9267BA3B0001FE8E7 /* 불.mov */,
+			);
+			path = "불";
+			sourceTree = "<group>";
+		};
+		576EE9BB267BA3B0001FE8E7 /* 강서구 */ = {
+			isa = PBXGroup;
+			children = (
+				576EE9BC267BA3B0001FE8E7 /* 강서구.mov */,
+			);
+			path = "강서구";
 			sourceTree = "<group>";
 		};
 		57E7B0B72622B19D00D0BE79 = {
@@ -225,9 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57460A3F26733B200000760E /* 장난감.mov in Resources */,
+				576EE9BE267BA3B0001FE8E7 /* 강서구.mov in Resources */,
+				576EE9BD267BA3B0001FE8E7 /* 불.mov in Resources */,
 				57E7B0D32622B19E00D0BE79 /* LaunchScreen.storyboard in Resources */,
 				57E7B0D02622B19E00D0BE79 /* Assets.xcassets in Resources */,
+				576EE9B7267BA378001FE8E7 /* 고속도로.mov in Resources */,
 				57E7B0CB2622B19D00D0BE79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

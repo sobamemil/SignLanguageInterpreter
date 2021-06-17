@@ -7,14 +7,13 @@
 
 import UIKit
 import CoreData
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        sleep(3) // LaunchScreen 화면을 3초간 지연
+        sleep(1) // LaunchScreen 화면을 3초간 지연
         
         return true
     }

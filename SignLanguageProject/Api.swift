@@ -13,41 +13,42 @@ import Alamofire
 // MARK:- API GET/POST
 class Api {
 
-    func apiSerch() {
+    func apiSerch(str: String, complitionHandler: @escaping ([String]) -> Void) {
         //접근하고자 하는 URL 정보
-        // let URL = "https://jsonplaceholder.typicode.com/todos/3"
-        let url = "http://1.244.160.11:8000/cctvapp/Person/"
-        //let url = (UIApplication.shared.delegate as! AppDelegate).webServerIpAddress
+        let url0 = "http://localhost:8000/sign/"
         
-        // 1. 전송할 값 준비
-        let param: [String:String] = [
-            "name": "testName"
-            ]
+//        // 1. 전송할 값 준비
+//        let param: [String:String] = [
+//            "s": str
+//            ]
 
-        // 전송
-        AF.request(url, method: .get, parameters: param, encoding: JSONEncoding.default, headers: [:]).responseJSON() { response in
-            switch response.result {
-            case .success:
+        var url1 = url0 + str
 
-                var found = false
-                if let jsonObject = try! response.result.get() as? NSArray {
-                    for json in jsonObject {
-                        print(json)
-                        
-                        let element = json as! NSDictionary
-                        // let name = String(unicodeScalarLiteral: element["name"] as! String) // 유니코드로 이상하게 나오지 않도록 변환
-                        let video = element["video"]
-                        
+        url1.append("/")
+        
+        var files = [String]()
+
+        if let encoded = url1.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let encodedUrl = URL(string: encoded)
+         {
+            // 전송
+            AF.request(encodedUrl, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: [:]).responseJSON() { response in
+                switch response.result {
+                case .success:
+                    if let jsonObject = try! response.result.get() as? NSDictionary {
+                        print(jsonObject)
+                        let count = jsonObject.count
+                        for i in 0..<count {
+                            print("\(i) : \(jsonObject["\(i)"] as! String)")
+                            files.append(jsonObject["\(i)"] as! String)
+                        }
                     }
+                    
+                    complitionHandler(files)
+                    print("요청성공")
+                case .failure(let error):
+                    print("에러 : \(error)")
+                    return
                 }
-                if(found == false) {
-                    // self.messageAlert(message: "등록되지 않은 사용자입니다. 등록 후 사용해주세요.")
-                    print("영상을 찾을 수 없습니다.")
-                }
-                
-            case .failure(let error):
-                print(error)
-                return
             }
         }
     }
