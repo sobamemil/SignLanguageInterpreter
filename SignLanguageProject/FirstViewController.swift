@@ -49,7 +49,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toWonjuSecondView", sender: nil)
+//        self.performSegue(withIdentifier: "toWonjuSecondView", sender: nil)
     }
     
 

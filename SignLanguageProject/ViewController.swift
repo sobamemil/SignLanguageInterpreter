@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var previewView: CapturePreviewView!
     @IBOutlet weak var classifiedLabel: UILabel!
     
+    var startFlag = false
+    
     let videoCapture: VideoCapture = VideoCapture()
     let context = CIContext()
     let model = alphabetClassification_2()
@@ -34,12 +36,14 @@ class ViewController: UIViewController {
             
             self.videoCapture.asyncStartCapturing()
         }else{
-            fatalError("Fail to init Video Capture")
+            // fatalError("Fail to init Video Capture")
+            classifiedLabel.text = "카메라를 사용할 수 없는 환경입니다."
         }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         self.videoCapture.asyncStopCapturing()
+        self.startFlag = false
     }
 }
 
@@ -57,7 +61,10 @@ extension ViewController : VideoCaptureDelegate{
         
         //레이블 업데이트
         DispatchQueue.main.async {
-            
+            if(!self.startFlag) {
+                self.classifiedLabel.text = ""
+                self.startFlag = true
+            }
             if((prediction?.classLabelProbs[prediction!.classLabel])! > 0.99) {
                 self.classifiedLabel.text! += prediction!.classLabel
                 print(prediction!.classLabel)

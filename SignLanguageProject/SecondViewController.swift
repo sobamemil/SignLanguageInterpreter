@@ -22,7 +22,7 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var btnRecord: UIButton!
     @IBOutlet weak var lbTestLabel: UILabel! {
         didSet {
-            lbTestLabel.text = "녹음하기"
+            lbTestLabel.text = "녹음하기 버튼을 누르면 녹음이 시작됩니다."
         }
     }
     
@@ -61,6 +61,7 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
             // 비디오 파일명을 사용하여 비디오가 저장된 앱 내부의 파일 경로를 받아옴
             guard let filename = self.word else {
                 print("파일 이름이 잘못되었습니다.")
+                btnRecord.isEnabled = true
                 return
             }
             
@@ -83,6 +84,7 @@ class SecondViewController: UIViewController, SFSpeechRecognizerDelegate {
                     print("파일 경로가 잘못 지정되었습니다.")
                     print("First File Path : \(String(describing: self.filePath))")
                     self.filePath = nil
+                    self.btnRecord.isEnabled = true
                     return
                 }
 

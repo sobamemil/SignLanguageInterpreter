@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NaS-zp-8P0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uiJ-sV-fLT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--1번 화면-->
+        <!--복지센터-->
         <scene sceneID="5VV-K7-HlH">
             <objects>
                 <navigationController id="g7R-qf-bRu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="1번 화면" id="swt-Ij-FbL"/>
+                    <tabBarItem key="tabBarItem" title="복지센터" id="swt-Ij-FbL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r9T-y1-tsn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UeR-Ti-gvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-632" y="-966"/>
+            <point key="canvasLocation" x="-1178" y="94"/>
         </scene>
         <!--원주시 장애인 복지시설-->
         <scene sceneID="Tsm-1E-yQ6">
@@ -85,12 +85,11 @@
                     <connections>
                         <outlet property="btnMore" destination="Pcx-2b-3vR" id="foj-jr-0aT"/>
                         <outlet property="tableView" destination="aQy-1T-N0n" id="7qJ-JQ-bQA"/>
-                        <segue destination="2Y0-6b-REd" kind="show" identifier="toWonjuSecondView" id="gD1-92-o4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1t1-qM-8T1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127.53623188405798" y="-966.29464285714278"/>
+            <point key="canvasLocation" x="-413" y="94"/>
         </scene>
         <!--Wonju Second View Controller-->
         <scene sceneID="NYB-RU-Eah">
@@ -115,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9I-fG-Z4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="-966"/>
+            <point key="canvasLocation" x="320" y="94"/>
         </scene>
         <!--Tab Bar Controller Main-->
         <scene sceneID="jbE-X4-NaX">
@@ -128,16 +127,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="g7R-qf-bRu" kind="relationship" relationship="viewControllers" id="JGJ-GM-PUd"/>
-                        <segue destination="Wd6-2j-Wlt" kind="relationship" relationship="viewControllers" id="Mhb-Lz-7kL"/>
-                        <segue destination="tm4-0f-ePY" kind="relationship" relationship="viewControllers" id="rAP-pG-O2L"/>
+                        <segue destination="NaS-zp-8P0" kind="relationship" relationship="viewControllers" id="pUz-1G-gp7"/>
+                        <segue destination="tm4-0f-ePY" kind="relationship" relationship="viewControllers" id="dfA-Gq-Rjx"/>
+                        <segue destination="g7R-qf-bRu" kind="relationship" relationship="viewControllers" id="S29-AH-44O"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxk-CL-FI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2039" y="-660"/>
         </scene>
-        <!--통역 화면-->
+        <!--음성으로-->
         <scene sceneID="MwM-0c-GPP">
             <objects>
                 <viewController id="tm4-0f-ePY" customClass="ViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,7 +160,7 @@
                         <viewLayoutGuide key="safeArea" id="aAb-Ok-OwL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="통역 화면" id="WKX-BL-dWs"/>
+                    <tabBarItem key="tabBarItem" title="음성으로" id="WKX-BL-dWs"/>
                     <connections>
                         <outlet property="classifiedLabel" destination="liy-Ua-8c0" id="eQx-sy-2s7"/>
                         <outlet property="previewView" destination="A6w-aE-ls5" id="gUr-nI-wbN"/>
@@ -169,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bou-nC-yqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="388"/>
+            <point key="canvasLocation" x="-1178" y="-610"/>
         </scene>
         <!--2번 화면-->
         <scene sceneID="Gyy-eg-osf">
@@ -206,9 +205,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHy-6l-EOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127.53623188405798" y="-307.36607142857139"/>
+            <point key="canvasLocation" x="1688" y="-476"/>
         </scene>
-        <!--2번 화면-->
+        <!--영상으로-->
         <scene sceneID="r3u-dY-BSF">
             <objects>
                 <viewController id="NaS-zp-8P0" customClass="SecondViewController" customModule="SignLanguageProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -217,7 +216,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-oi-L5P">
-                                <rect key="frame" x="159" y="832" width="96" height="30"/>
+                                <rect key="frame" x="159" y="757" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="녹음하기"/>
                                 <connections>
@@ -225,7 +224,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agb-I5-gGK">
-                                <rect key="frame" x="68" y="777" width="279" height="28"/>
+                                <rect key="frame" x="20" y="644" width="374" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="녹음하기 버튼을 누르고 말하면 수화 영상을 띄워줍니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufK-lO-HoN">
+                                <rect key="frame" x="20" y="156" width="374" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -235,7 +241,7 @@
                         <viewLayoutGuide key="safeArea" id="bBQ-Me-e5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="2번 화면" id="Br8-nQ-qKX"/>
+                    <tabBarItem key="tabBarItem" title="영상으로" id="Br8-nQ-qKX"/>
                     <connections>
                         <outlet property="btnRecord" destination="fvp-oi-L5P" id="YXJ-Gf-pue"/>
                         <outlet property="lbTestLabel" destination="agb-I5-gGK" id="G1u-ab-x4C"/>
@@ -243,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EqC-Kk-6Td" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3859" y="-165"/>
+            <point key="canvasLocation" x="-1178.2608695652175" y="-1256.25"/>
         </scene>
     </scenes>
     <resources>
