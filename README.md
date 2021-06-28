@@ -6,6 +6,8 @@
 
 현재까지의 음성 -> 수어 시연 영상은 https://sobamemil.tistory.com/185 에서 확인 가능.
 
+
+
 # 구현 환경
 
 Application - Swift5.5를 사용하여 Xcode13 환경에서 개발
